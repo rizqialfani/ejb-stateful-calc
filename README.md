@@ -27,5 +27,8 @@ Calculator using Stateful Session Beans on Enterprise Java Beans
 <img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/reset.png' width='475'>
 </p>
 
+## Project Dashboard
+See more assignment from this [link](https://mr.al-21296.s3.amazonaws.com/index.html).
+
 ## Source
 Thanks to [BegoUrsus](https://github.com/BegoUrsus/calculadora-bt) for beautiful design.
