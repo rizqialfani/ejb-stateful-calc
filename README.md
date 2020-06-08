@@ -4,27 +4,27 @@ Calculator using Stateful Session Beans on Enterprise Java Beans
 ## Overview
 ### Main Page
 <p align='center'>
-<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/index.png' width='600'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/index.png' width='725'>
 </p>
 
 ### First Operation
 <p align='center'>
-<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/first-op.png' width='600'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/first-op.png' width='725'>
 </p>
 
 ### Second Operation
 <p align='center'>
-<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/second-op.png' width='600'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/second-op.png' width='725'>
 </p>
 
 ### Final Result
 <p align='center'>
-<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/final-result.png' width='600'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/final-result.png' width='725'>
 </p>
 
 ### Reset
 <p align='center'>
-<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/reset.png' width='600'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/reset.png' width='725'>
 </p>
 
 ## Project Dashboard
