@@ -36,16 +36,31 @@
     <nav class="navbar navbar-inverse" style="background-color: #4E5F72; border-color: #4E5F72;">
       <div class="container-fluid">
         <h1 style="text-align: center; color: white;">Calculator using Stateful Session Beans</h1>
-        <h3 style="text-align: center; color: white; margin: 10px 0 20px 0">M. Rizqi Alfani - 21120117140007</h3>
+        <h3 style="text-align: center; color: white; margin: 10px 0 0 0">M. Rizqi Alfani - 21120117140007</h3>
+        <h3 style="text-align: center; color: white; margin: 5px 0 5px 0">Dita Ananda Elisa Reviana - 21120117140009</h3>
+        <h3 style="text-align: center; color: white; margin: 0 0 20px 0">Yarnish Dwi Sagita Fidarliyan - 21120117130049</h3>
       </div>
     </nav>
   </header>
-  <div style="display: flex; margin: 0 auto; width: 50%;">
-    <div class="container calculadora"> 
-      <div class="container-fluid teclado ">
+  <div style="display: flex; margin: 0 auto; width: 25%;">
+    <div class="container calculadora" style="background-color: #4E5F72;"> 
+      <div class="container-fluid teclado " style="background-color: lightgray;">
           <div class="col-xs-12 col-sm-12 teclado-ordenador">
             <div class="row">
-              <a class="btn btn-success bnt-md op_calcular" id="b_calcula" title="Resultado" href="Calculator">Mulai Menghitung</a>
+              <a class="btn btn-success bnt-md op_calcular" id="b_calcula" title="Resultado"  style="background-color: lightgray; border-color: lightgray; color: black; font-weight: bold;" href="Calculator">START CALCULATE</a>
+            </div>
+          </div> <!--teclado numérico principal -->
+
+      </div> <!--calculadora -->
+    </div>
+  </div>
+    
+  <div style="display: flex; margin: 0 auto; width: 25%;">
+    <div class="container calculadora" style="background-color: #4E5F72;"> 
+      <div class="container-fluid teclado" style="background-color: lightgray;">
+          <div class="col-xs-12 col-sm-12 teclado-ordenador">
+            <div class="row">
+              <a class="btn btn-success bnt-md op_calcular" id="b_calcula" title="Resultado" style="background-color: lightgray; border-color: lightgray; color: black; font-weight: bold;" href="https://mr.al-21296.s3.amazonaws.com/index.html">DASHBOARD PAGE</a>
             </div>
           </div> <!--teclado numérico principal -->
 

@@ -92,42 +92,6 @@ public class Calculator extends HttpServlet {
 //            out.println("<input type=\"submit\" value=\"=\" />");
 //            out.println("<input type=\"text\" name =\"result\" value=\"" + value + "\" />");
 //            out.println("</form>");
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet Calculator</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<center><h2>Kalkulator Statefull</h2></center>");
-//            out.println("<div id='calc-contain'>");
-//            out.println("<form name=\"calculator\">");
-//            out.println("<center><input type=\"text\" name=\"answer\" /></center>");
-//            out.println("<br>");
-//            out.println("<center>");
-//            out.println("<input type=\"button\" value=\" 1 \" onclick=\"calculator.answer.value += '1'\" />");
-//            out.println("<input type=\"button\" value=\" 2 \" onclick=\"calculator.answer.value += '2'\" />");
-//            out.println("<input type=\"button\" value=\" 3 \" onclick=\"calculator.answer.value += '3'\" />");
-//            out.println("<input type=\"button\" value=\" + \" onclick=\"calculator.answer.value += '+'\" />");
-//            out.println("<br/>");
-//            out.println("<input type=\"button\" value=\" 4 \" onclick=\"calculator.answer.value += '4'\" />");
-//            out.println("<input type=\"button\" value=\" 5 \" onclick=\"calculator.answer.value += '5'\" />");
-//            out.println("<input type=\"button\" value=\" 6 \" onclick=\"calculator.answer.value += '6'\" />");
-//            out.println("<input type=\"button\" value=\" - \" onclick=\"calculator.answer.value += '-'\" />");
-//            out.println("<br/>");
-//            out.println("<input type=\"button\" value=\" 7 \" onclick=\"calculator.answer.value += '7'\" />");
-//            out.println("<input type=\"button\" value=\" 8 \" onclick=\"calculator.answer.value += '8'\" />");
-//            out.println("<input type=\"button\" value=\" 9 \" onclick=\"calculator.answer.value += '9'\" />");
-//            out.println("<input type=\"button\" value=\" x \" onclick=\"calculator.answer.value += '*'\" />");
-//            out.println("<br/>");
-//            out.println("<input type=\"button\" value=\" c \" onclick=\"calculator.answer.value = ''\" />");
-//            out.println("<input type=\"button\" value=\" 0 \" onclick=\"calculator.answer.value += '0'\" />");
-//            out.println("<input type=\"button\" value=\" = \" onclick=\"calculator.answer.value = eval(calculator.answer.value)\" />");
-//            out.println("<input type=\"button\" value=\" / \" onclick=\"calculator.answer.value += '/'\" />");
-//            out.println("<br/>");
-//            out.println("</center>");
-//            out.println("</div>");
-//            out.println("</body>");
-//            out.println("</html>");
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
@@ -154,7 +118,9 @@ public class Calculator extends HttpServlet {
                 out.println("    <nav class='navbar navbar-inverse' style='background-color: #4E5F72; border-color: #4E5F72;'>");
                 out.println("      <div class='container-fluid'>");
                 out.println("        <h1 style='text-align: center; color: white;'>Calculator using Stateful Session Beans</h1>");
-                out.println("        <h3 style='text-align: center; color: white; margin: 10px 0 20px 0'>M. Rizqi Alfani - 21120117140007</h3>");
+                out.println("        <h3 style='text-align: center; color: white; margin: 10px 0 0 0'>M. Rizqi Alfani - 21120117140007</h3>");
+                out.println("        <h3 style='text-align: center; color: white; margin: 5px 0 5px 0'>Dita Ananda Elisa Reviana - 21120117140009</h3>");
+                out.println("        <h3 style='text-align: center; color: white; margin: 0 0 20px 0'>Yarnish Dwi Sagita Fidarliyan - 21120117130049</h3>");                
                 out.println("      </div>");
                 out.println("    </nav>");
                 out.println("  </header>");
@@ -203,10 +169,21 @@ public class Calculator extends HttpServlet {
                 out.println("              <input class=\'btn btn-success bnt-md op_calcular\' id=\'b_calcula\' title=\'Result\' style=\'width: 224%\' type=\"button\" value=\" = \" onclick=\"calculator.answer.value = eval(calculator.answer.value)\" />");
                 out.println("            </div>");
                 out.println("          </div>");
-
+                out.println("      </div>");                
+                out.println("    </div>");
+                out.println("  </div>");
+                
+                out.println("  <div style='display: flex; margin: 0 auto; width: 25%;'>");
+                out.println("    <div class='container calculadora'  style=\"background-color: #4E5F72;\">");
+                out.println("      <div class='container-fluid teclado'>");
+                out.println("          <div class='col-xs-12 col-sm-12 teclado-ordenador'>");
+                out.println("            <div class='row'>");
+                out.println("              <a class='btn btn-success bnt-md op_calcular' id='b_calcula' title='Resultado' style=\"background-color: lightgray; border-color: lightgray; color: black; font-weight: bold;\"  href='../StatefulCalc-war/'>BACK TO MAIN PAGE</a>");
+                
+                out.println("            </div>");
+                out.println("          </div>");
                 out.println("      </div>");
                 out.println("    </div>");
-
                 out.println("  </div>");
                 out.println("</body>");
                 out.println("</html>");
