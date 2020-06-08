@@ -2,15 +2,30 @@
 Calculator using Stateful Session Beans on Enterprise Java Beans
 
 ## Overview
-### 
+### Main Page
 <p align='center'>
-<img src='https://raw.githubusercontent.com/rizqialfani01/javabeans-progressbar/master/.jpg' width='475'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/index.png' width='475'>
 </p>
 
-### 
+### First Operation
 <p align='center'>
-<img src='https://raw.githubusercontent.com/rizqialfani01/javabeans-progressbar/master/.jpg' width='475'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/first-op.png' width='475'>
+</p>
+
+### Second Operation
+<p align='center'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/second-op.png' width='475'>
+</p>
+
+### Final Result
+<p align='center'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/final-result.png' width='475'>
+</p>
+
+### Reset
+<p align='center'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/reset.png' width='475'>
 </p>
 
 ## Source
-Thanks to for beautiful design.
+Thanks to [BegoUrsus](https://github.com/BegoUrsus/calculadora-bt) for beautiful design.
