@@ -16,20 +16,41 @@ public class CalculatorBean implements CalculatorBeanLocal {
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
-    @Override
-    public double add(double addend1, double addend2) {
-        return addend1 + addend2;
+    private double nilai = 0;
+    
+    @Override    
+    public double isiNilai(double nilai2) {        
+        nilai = nilai2;
+        return nilai;
     }
     @Override
-    public double subtract(double minuend, double subtrahend) {
-        return minuend - subtrahend;
+    public double tambah(double nilai2){
+        nilai += nilai2;
+        return nilai;
     }
-    @Override
-    public double multiply(double factor1, double factor2) {
-        return factor1 * factor2;
-    }
-    @Override
-    public double divide(double dividend, double divisor) {
-        return dividend / divisor;
+    @Override   
+    public double kurang(double nilai2) {        
+        nilai -= nilai2;
+        return nilai;
     }    
+    @Override    
+    public double kali(double nilai2) {        
+        nilai *= nilai2;
+        return nilai;
+    }    
+    @Override    
+    public double bagi(double nilai2) {        
+        nilai /= nilai2;
+        return nilai;    
+    }
+    @Override
+    public double ambilNilai(){
+        return nilai;
+    }
+
+    @Override
+    public double reset(){
+        double nilai2 = 0;
+        return nilai2;
+    }
 }

@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,159 +41,183 @@ public class Calculator extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request,
             HttpServletResponse response) throws ServletException,IOException { 
- 
-//        double n1 = 0.0;
-//        if(request.getParameter("n1") != null) {
-//            n1 = Double.parseDouble(request.getParameter("n1"));
-//        }
-//        double n2 = 0.0;
-//        if(request.getParameter("n2") != null) {
-//            n2 = Double.parseDouble(request.getParameter("n2"));
-//        }
-//        request.setAttribute("display", 4);
-//        String operation = request.getParameter("op");
-//        String value = "";
-//        if (request.getParameter("Add") != null) {
-//            value += calculatorBean.add(n1, n2);
-//        }
-//        if (request.getParameter("Sub") != null) {
-//            value += calculatorBean.subtract(n1, n2);
-//        }
-//        if (request.getParameter("Div") != null) {
-//            value += calculatorBean.multiply(n1, n2);
-//        }
-//        if (request.getParameter("Mul") != null) {
-//            value += calculatorBean.divide(n1, n2);
-//        } 
-//        if(operation != null && operation.equals("add")) {
-//            value += calculatorBean.add(n1, n2);
-//        }
-//        if(operation != null && operation.equals("subtract")) {
-//            value += calculatorBean.subtract(n1, n2);
-//        }
-//        if(operation != null && operation.equals("multiply")) {
-//            value += calculatorBean.multiply(n1, n2);
-//        }
-//        if(operation != null && operation.equals("divide")) {
-//            value += calculatorBean.divide(n1, n2);
-//        } 
- 
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
         try {
-//            out.println("<form method=\"post\" action=\"Calculator\">");
-//            out.println("<input type=\"text\" name=\"n1\" value=\"" + n1 + "\"/>");
-//            out.println("<select name=\"op\">");
-//            out.println("<option value=\"add\">+</option>");
-//            out.println("<option value=\"subtract\">-</option>");
-//            out.println("<option value=\"multiply\">*</option>");
-//            out.println("<option value=\"divide\">/</option>");
-//            out.println("</select>");
-//            out.println("<input type=\"text\" name=\"n2\" value=\"" + n2 + "\"/>");
-//            out.println("<input type=\"submit\" value=\"=\" />");
-//            out.println("<input type=\"text\" name =\"result\" value=\"" + value + "\" />");
-//            out.println("</form>");
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("  <title>Stateful Calculator</title>");
-
-                out.println("  <meta charset='utf-8'>");
-                out.println("  <meta http-equiv='X-UA-Compatible' content='IE=edge'>");
-                out.println("  <meta name='viewport' content='width=device-width, initial-scale=1'>");
-
-                out.println("  <link href='http://begoursus.github.io/calculadora-bt/site/css/bootstrap.css' rel='stylesheet'>");
-                out.println("  <link rel='stylesheet' type='text/css' href='http://begoursus.github.io/calculadora-bt/site/css/supernice.css'>");
-                out.println("  <link rel='stylesheet' type='text/css' href='http://begoursus.github.io/calculadora-bt/site/css/styles.css'>");
-                out.println("  <link rel='stylesheet' type='text/css' href='http://begoursus.github.io/calculadora-bt/site/css/styles_calculadora.css'>");
-
-                out.println("  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>");
-                out.println("  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic' rel='stylesheet' type='text/css'>");
-                out.println("  <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>");
-                out.println("  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'>");
-                out.println("  <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>");
-                out.println("</head>");
-                
-                out.println("<body style='background-color: #99BADD;'>");
-                out.println("  <header class='container' style='width: 50%;'>");
-                out.println("    <nav class='navbar navbar-inverse' style='background-color: #4E5F72; border-color: #4E5F72;'>");
-                out.println("      <div class='container-fluid'>");
-                out.println("        <h1 style='text-align: center; color: white;'>Calculator using Stateful Session Beans</h1>");
-                out.println("        <h3 style='text-align: center; color: white; margin: 10px 0 0 0'>M. Rizqi Alfani - 21120117140007</h3>");
-                out.println("        <h3 style='text-align: center; color: white; margin: 5px 0 5px 0'>Dita Ananda Elisa Reviana - 21120117140009</h3>");
-                out.println("        <h3 style='text-align: center; color: white; margin: 0 0 20px 0'>Yarnish Dwi Sagita Fidarliyan - 21120117130049</h3>");                
-                out.println("      </div>");
-                out.println("    </nav>");
-                out.println("  </header>");
-                out.println("  <div style='display: flex; margin: 0 auto; width: 50%;'>");
-                out.println("    <div class='container calculadora'>"); 
-                out.println("      <div class='container-fluid cabecera' id='cabecera'>");
-                out.println("        <!-- grupo LCD + Botón atrás -->");
-                out.println("        <div class='col-xs-12 col-sm-12' id='resultado'>");
-                out.println("          <div class='input-group  has-success' style='width: 100%;'>");
-                out.println("            <form name=\"calculator\">");
-                out.println("            <input type=\'text\' class=\'form-control\' value=\'\' id=\'lcd\' style=\'border-radius: 4px;\' name=\'answer\' />");
-                out.println("          </div>"); 
-                out.println("        </div>"); 
-
-                out.println("      </div>");
-
-                out.println("      <div class='container-fluid teclado '>");
-                out.println("          <div class='col-xs-12 col-sm-12 teclado-ordenador'>");
-                out.println("            <div class='row' id='tp-r1'>");
-                out.println("              <!-- <button class='btn btn-info bnt-md' data-toggle='modal' data-target='#myModal'> -->");
-                out.println("              <button class='btn btn-danger bnt-md op_borrar' id='b_borrar_parcial' type='reset' value='reset' title='Reset'>CE</button>");
-                out.println("              <input type=\'button\' class=\'btn btn-primary bnt-md op_binario\' id=\'b_multiplica\' title=\'Mul\' style=\'width:31.5%;\' value=\" x \" onclick=\"calculator.answer.value += '*'\" />");
-                out.println("            </div>");
-
-                out.println("            <div class='row' id='tp-r2'>");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'num7\' type=\"button\" value=\" 7 \" onclick=\"calculator.answer.value += '7'\" />");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'num8\' type=\"button\" value=\" 8 \" onclick=\"calculator.answer.value += '8'\" />");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'num9\' type=\"button\" value=\" 9 \" onclick=\"calculator.answer.value += '9'\" />");
-                out.println("              <input type=\'button\' class=\'btn btn-primary bnt-md op_binario\' id=\'b_suma\' title=\'Sum\' value=\" + \" onclick=\"calculator.answer.value += '+'\" />");
-                out.println("            </div>");
-                out.println("            <div class='row' id='tp-r3'>");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'num4\' type=\"button\" value=\" 4 \" onclick=\"calculator.answer.value += '4'\" />");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'num5\' type=\"button\" value=\" 5 \" onclick=\"calculator.answer.value += '5'\" />");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'num6\' type=\"button\" value=\" 6 \" onclick=\"calculator.answer.value += '6'\" />");
-                out.println("              <input type=\'button\' class=\'btn btn-primary bnt-md op_binario\' id=\'b_resta\' title=\'Sub\' value=\" - \" onclick=\"calculator.answer.value += '-'\" />");
-                out.println("            </div>");
-                out.println("            <div class='row' id='tp-r4-r5'>");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'num1\' type=\"button\" value=\" 1 \" onclick=\"calculator.answer.value += '1'\" />");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'num2\' type=\"button\" value=\" 2 \" onclick=\"calculator.answer.value += '2'\" />");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'num3\' type=\"button\" value=\" 3 \" onclick=\"calculator.answer.value += '3'\" />");
-                out.println("              <input type=\'button\' class=\'btn btn-primary bnt-md op_binario\' id=\'b_divide\' title=\'Div\' value=\" / \" onclick=\"calculator.answer.value += '/'\" />");
-                out.println("            </div>");
-                out.println("            <div class='row'>");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'punto\' type=\"button\" title=\'Comma\' value=\" . \" onclick=\"calculator.answer.value += '.'\" />");
-                out.println("              <input class=\'btn btn-default bnt-md btn_numero\' id=\'num0\' type=\"button\" value=\" 0 \" onclick=\"calculator.answer.value += '0'\" />");
-                out.println("              <input class=\'btn btn-success bnt-md op_calcular\' id=\'b_calcula\' title=\'Result\' style=\'width: 224%\' type=\"button\" value=\" = \" onclick=\"calculator.answer.value = eval(calculator.answer.value)\" />");
-                out.println("            </div>");
-                out.println("          </div>");
-                out.println("      </div>");                
-                out.println("    </div>");
-                out.println("  </div>");
-                
-                out.println("  <div style='display: flex; margin: 0 auto; width: 25%;'>");
-                out.println("    <div class='container calculadora'  style=\"background-color: #4E5F72;\">");
-                out.println("      <div class='container-fluid teclado'>");
-                out.println("          <div class='col-xs-12 col-sm-12 teclado-ordenador'>");
-                out.println("            <div class='row'>");
-                out.println("              <a class='btn btn-success bnt-md op_calcular' id='b_calcula' title='Resultado' style=\"background-color: lightgray; border-color: lightgray; color: black; font-weight: bold;\"  href='../StatefulCalc-war/'>BACK TO MAIN PAGE</a>");
-                
-                out.println("            </div>");
-                out.println("          </div>");
-                out.println("      </div>");
-                out.println("    </div>");
-                out.println("  </div>");
-                out.println("</body>");
-                out.println("</html>");
+            double nilai;
+            double nilaiTemp = 0;
+            String operator = "";
+            if (request.getParameter("Tambah") != null) {
+                if (!request.getParameter("hasil").isEmpty()) {
+                    operator = request.getParameter("operator");
+                    nilaiTemp = Double.parseDouble(request.getParameter("hasil"));
+                    if ("+".equals(operator)){
+                        nilai = calculatorBean.tambah(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("-".equals(operator)){
+                        nilai = calculatorBean.kurang(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("*".equals(operator)){
+                        nilai = calculatorBean.kali(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("/".equals(operator)){
+                        nilai = calculatorBean.bagi(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    else {
+                        nilai = calculatorBean.isiNilai(nilaiTemp);
+                    }
+                    request.setAttribute("panelOp", "+");
+                    request.setAttribute("panelNB", "");
+                    request.setAttribute("panelNL", nilai);
+                }
+                else {
+                    operator = "+";
+                    request.setAttribute("panelOp", "+");
+                }
+            }
+            if (request.getParameter("Kurang") != null) {
+                if (!request.getParameter("hasil").isEmpty()) {
+                    operator = request.getParameter("operator");
+                    nilaiTemp = Double.parseDouble(request.getParameter("hasil"));
+                    if ("+".equals(operator)){
+                        nilai = calculatorBean.tambah(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("-".equals(operator)){
+                        nilai = calculatorBean.kurang(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("*".equals(operator)){
+                        nilai = calculatorBean.kali(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("/".equals(operator)){
+                        nilai = calculatorBean.bagi(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    else {
+                        nilai = calculatorBean.isiNilai(nilaiTemp);
+                    }
+                    request.setAttribute("panelOp", "-");
+                    request.setAttribute("panelNB", "");
+                    request.setAttribute("panelNL", nilai);
+                }
+                else {
+                    operator = "-";
+                    request.setAttribute("panelOp", "-");
+                }
+            }
+            if (request.getParameter("Kali") != null) {
+                if (!request.getParameter("hasil").isEmpty()) {
+                    operator = request.getParameter("operator");
+                    nilaiTemp = Double.parseDouble(request.getParameter("hasil"));
+                    if ("+".equals(operator)){
+                        nilai = calculatorBean.tambah(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("-".equals(operator)){
+                        nilai = calculatorBean.kurang(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("*".equals(operator)){
+                        nilai = calculatorBean.kali(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("/".equals(operator)){
+                        nilai = calculatorBean.bagi(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    else {
+                        nilai = calculatorBean.isiNilai(nilaiTemp);
+                    }
+                    request.setAttribute("panelOp", "*");
+                    request.setAttribute("panelNB", "");
+                    request.setAttribute("panelNL", nilai);
+                }
+                else {
+                    operator = "*";
+                    request.setAttribute("panelOp", "*");
+                }
+            }
+            if (request.getParameter("Bagi") != null) {
+                if (!request.getParameter("hasil").isEmpty()) {
+                    operator = request.getParameter("operator");
+                    nilaiTemp = Double.parseDouble(request.getParameter("hasil"));
+                    if ("+".equals(operator)){
+                        nilai = calculatorBean.tambah(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("-".equals(operator)){
+                        nilai = calculatorBean.kurang(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("*".equals(operator)){
+                        nilai = calculatorBean.kali(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    if ("/".equals(operator)){
+                        nilai = calculatorBean.bagi(nilaiTemp);
+                        nilaiTemp = nilai;
+                    }
+                    else {
+                        nilai = calculatorBean.isiNilai(nilaiTemp);
+                    }
+                    request.setAttribute("panelOp", "/");
+                    request.setAttribute("panelNB", "");
+                    request.setAttribute("panelNL", nilai);
+                }
+                else {
+                    operator = "/";
+                    request.setAttribute("panelOp", "/");
+                }
+            }
+            if (request.getParameter("Equal") != null) {
+                if (!request.getParameter("hasil").isEmpty()) {
+                    nilaiTemp = Double.parseDouble(request.getParameter("hasil"));
+                    operator = request.getParameter("operator");
+                    if ("+".equals(operator)){
+                        nilai = calculatorBean.tambah(nilaiTemp);
+                        request.setAttribute("panelNB", nilai);
+                    }
+                    if ("-".equals(operator)){
+                        nilai = calculatorBean.kurang(nilaiTemp);
+                        request.setAttribute("panelNB", nilai);
+                    }
+                    if ("*".equals(operator)){
+                        nilai = calculatorBean.kali(nilaiTemp);
+                        request.setAttribute("panelNB", nilai);
+                    }
+                    if ("/".equals(operator)){
+                        nilai = calculatorBean.bagi(nilaiTemp);
+                        request.setAttribute("panelNB", nilai);
+                    }
+                    else {
+                        nilai = calculatorBean.ambilNilai();
+                        request.setAttribute("panelNB", nilai);
+                    }
+                    request.setAttribute("panelOp", "=");
+                }
+            }
+            if (request.getParameter("reset") != null){
+                calculatorBean.reset();
+                request.setAttribute("panelNB", "");
+            }
+            else {
+                nilai = calculatorBean.ambilNilai();
+            }
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/calculator.jsp");
+            rd.include(request, response);
         }
         catch (Exception ex) {
+            PrintWriter out = response.getWriter();
             out.println("Error:"+
                     ex.getMessage());
         }
         finally {
+            PrintWriter out = response.getWriter();
             out.close();
         }
     }

@@ -7,14 +7,14 @@ Calculator using Stateful Session Beans on Enterprise Java Beans
 <img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/index.png' width='725'>
 </p>
 
-### First Operation
+### Input First Value
 <p align='center'>
-<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/first-op.png' width='725'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/value1.png' width='725'>
 </p>
 
-### Second Operation
+### Input Operand & Second Value
 <p align='center'>
-<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/second-op.png' width='725'>
+<img src='https://raw.githubusercontent.com/rizqialfani01/ejb-stateful-calc/master/opvalue2.png' width='725'>
 </p>
 
 ### Final Result

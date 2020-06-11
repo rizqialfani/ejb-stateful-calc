@@ -13,8 +13,11 @@ import javax.ejb.Local;
  */
 @Local
 public interface CalculatorBeanLocal {
-    public double subtract(double minuend, double subtrahend);
-    public double multiply(double factor1, double factor2);
-    public double divide(double dividend, double divisor);
-    public double add(double addend1, double addend2);
+     public double isiNilai (double nilai2);
+     public double tambah (double nilai2);
+     public double kurang (double nilai2);    
+     public double kali (double nilai2);    
+     public double bagi (double nilai2);
+     public double ambilNilai();
+     public double reset();
 }
